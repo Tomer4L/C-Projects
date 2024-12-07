@@ -1,0 +1,8 @@
+
+echo "building..."
+
+gcc -c program.c -I myHeaders
+
+gcc -o main program.o -I myHeaders/
+
+echo "done, main is ready."

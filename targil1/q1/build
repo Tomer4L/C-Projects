@@ -1,0 +1,14 @@
+
+echo "building..."
+
+gcc -c lengthof.c returnnuminplace.c -I myHeaders
+
+ar rcs libaid.a lengthof.o returnnuminplace.o 
+
+mv libaid.a myLibs/
+
+gcc -c program.c -I myHeaders
+
+gcc -o main program.o -I myHeaders/ -L myLibs/ -l aid
+
+echo "done, main is ready."
